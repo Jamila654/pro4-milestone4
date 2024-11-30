@@ -120,7 +120,7 @@ const Dashboard = () => {
       <div className="cards   grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4">
         {posts.map((post) => (
           <div key={post._id} className="card">
-            <Card className=" bg-black text-white hover:border-[12px] hover:rounded-3xl transition 0.3s ease-in-out">
+            <Card className=" bg-black text-white hover:shadow-lg hover:shadow-white  transition 0.3s ease-in-out">
               <CardHeader>
                 <CardTitle>Title: {post.title}</CardTitle>
               </CardHeader>

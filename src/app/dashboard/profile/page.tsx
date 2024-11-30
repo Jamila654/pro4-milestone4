@@ -37,7 +37,7 @@ function ProfilePage() {
         <CardHeader>
           <CardTitle>Profile</CardTitle>
         </CardHeader>
-        <CardContent className=" w-[350px] overflow-y-scroll">
+        {/* <CardContent className=" w-[350px] overflow-y-scroll">
         {JSON.stringify(
            {
             session,
@@ -46,6 +46,17 @@ function ProfilePage() {
          null,
          2
         )}
+        </CardContent> */}
+         <CardContent className="w-[350px] overflow-y-scroll">
+          {/* Check if session exists and display the fullName and email */}
+          {session && session.user ? (
+            <div>
+              <p><strong>Full Name:</strong> {session.user.fullname || "N/A"}</p>
+              <p><strong>Email:</strong> {session.user.email || "N/A"}</p>
+            </div>
+          ) : (
+            <p>No session data available.</p>
+          )}
         </CardContent>
       </Card>
     </main>
